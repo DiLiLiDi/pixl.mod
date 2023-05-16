@@ -105,7 +105,7 @@ uint8_t bat_get_level(void) {
     // lipo mode
     if (settings_get_data()->bat_mode) {
         p_voltage_map = lipo_voltage_map;
-        voltage = 3.6f / 1024 * adc_value * 1.451f;
+        voltage = 3.6f / 1024 * adc_value * 2.1f;
     } else { // cr2032 mode
         p_voltage_map = cr2032_voltage_map;
         voltage = 3.6f / 1024 * adc_value;
